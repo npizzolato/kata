@@ -9,6 +9,9 @@ class StringCalculator:
 
 			sum = 0
 			for num in split:
+				n = int(num)
+				if n < 0:
+					raise ValueError("negative numbers not allowed")
 				sum += int(num)
 
 			return sum

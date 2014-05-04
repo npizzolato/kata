@@ -20,15 +20,12 @@ class StringCalculatorTests(unittest.TestCase):
 	def test_custom_delimiter(self):
 		self.assertEqual(3, self.sc.add("//;\n1;2"))
 
-	def test_split_single(self):
-		self.assertEqual(
-			["2", "3"], 
-			self.sc.split("2,3", [","]))
-
-	def test_split_multiple(self):
-		self.assertEqual(
-			["2", "3", "4"], 
-			self.sc.split("2,3.4", [",", "."]))
+	def test_negatives_not_allowed(self):
+		self.assertRaisesRegex(
+			ValueError,
+			"negative numbers not allowed",
+			self.sc.add,
+			"-4")
 
 if __name__ == "__main__":
 	unittest.main()
