@@ -11,3 +11,12 @@ class StringCalculator:
 
 			return sum
 
+	def split(self, str, seps):
+		res = [str]
+		for sep in seps:
+			s = res
+			res = []
+			for seq in s:
+				res += seq.split(sep)
+		return res
+

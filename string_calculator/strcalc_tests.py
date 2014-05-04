@@ -17,5 +17,15 @@ class StringCalculatorTests(unittest.TestCase):
 	def test_add_many_numbers(self):
 		self.assertEqual(10, self.sc.add("1,2,3,4"))
 
+	def test_split_single(self):
+		self.assertEqual(
+			["2", "3"], 
+			self.sc.split("2,3", [","]))
+
+	def test_split_multiple(self):
+		self.assertEqual(
+			["2", "3", "4"], 
+			self.sc.split("2,3.4", [",", "."]))
+
 if __name__ == "__main__":
 	unittest.main()
