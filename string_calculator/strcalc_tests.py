@@ -6,5 +6,9 @@ class StringCalculatorTests(unittest.TestCase):
 		sc = StringCalculator()
 		self.assertEqual(0, sc.add(""))
 
+	def test_add_one_number_returns_number(self):
+		sc = StringCalculator()
+		self.assertEqual(1, sc.add("1"))
+
 if __name__ == "__main__":
 	unittest.main()
