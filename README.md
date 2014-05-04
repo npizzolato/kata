@@ -5,4 +5,4 @@ This is a collection of small programming challenges and my solutions. The goal 
 ## Included Challenges
 
 Here is the list of programming challenges currently included in this repository. 
- - Nothing yet :(
+ - String Calculator
