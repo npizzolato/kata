@@ -3,5 +3,11 @@ class StringCalculator:
 		if (str == ""):
 			return 0
 		else:
-			return int(str)
+			split = str.split(",")
+			sum = 0
+
+			for num in split:
+				sum += int(num)
+
+			return sum
 
