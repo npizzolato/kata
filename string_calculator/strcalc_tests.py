@@ -17,6 +17,9 @@ class StringCalculatorTests(unittest.TestCase):
 	def test_add_many_numbers(self):
 		self.assertEqual(10, self.sc.add("1,2,3,4"))
 
+	def test_newline_delimiter(self):
+		self.assertEqual(3, self.sc.add("1\n2"))
+
 	def test_split_single(self):
 		self.assertEqual(
 			["2", "3"], 

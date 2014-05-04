@@ -3,7 +3,7 @@ class StringCalculator:
 		if (str == ""):
 			return 0
 		else:
-			split = str.split(",")
+			split = self.split(str, [",", "\n"])
 			sum = 0
 
 			for num in split:
